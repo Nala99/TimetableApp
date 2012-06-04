@@ -21,11 +21,11 @@ exports.getLFeeds=function(params,callback){
   },function(res,err){
     if(err){
       console.log("Result Found");
-      return callback(null,res);
+      return callback(null,err);
     }
     else{
       //var fdataList=ldata.list;
-      return callback(null,err);
+      return callback(null,res);
     }
   });
 };
