@@ -19,12 +19,12 @@ exports.getLFeeds=function(params,callback){
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 1
   },function(res,err){
-    if(error){
-      return callback(null,err);
+    if(res){
+      return callback(null,res);
     }
     else{
       //var fdataList=ldata.list;
-      return callback(null,res);
+      return callback(null,err);
     }
   });
 };
