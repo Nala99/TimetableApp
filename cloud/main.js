@@ -23,7 +23,9 @@ exports.getLFeeds=function(params,callback){
       return callback(null,err);
     }
     else{
-      return callback(null,res.list);
+      var itwrked = document.write("ANS");
+      return callback(null,itwrked);
+      //return callback(null,res.list);
     }
   });
 };
