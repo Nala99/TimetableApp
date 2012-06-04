@@ -18,9 +18,9 @@ exports.getLFeeds=function(params,callback){
   var ldata = $fh.feed({
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 10
-  },function(result,error){
+  },function(res,err){
     if(error){
-      return callback(null,error);
+      return callback(null,err);
     }
     else{
       //var fdataList=ldata.list;
