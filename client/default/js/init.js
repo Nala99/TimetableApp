@@ -171,6 +171,8 @@ function showFeed(name){
         $("<p>" + res[i].fields.title + "</p>").appendTo("#contentText");
     }
     setiScroll();
+  },function(err){
+    alert("ERROR");
   }
 );}
 else if(fname=="College"){
