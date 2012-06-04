@@ -5,9 +5,9 @@
 */
 
 //Retrieve timetable data from the cloud
-function getTimetable(){
-  return { data : timetable};  
-}
+exports.getTimetable=function(params,callback){
+  return callback(null,{data : timetable});  
+};
 
 /*
 Depending on what the user clicks one of the follwing functions will be called 
