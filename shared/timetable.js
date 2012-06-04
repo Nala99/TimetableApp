@@ -80,3 +80,7 @@ var timetable = {
       {"time":"4:15","className":" ","room":" ","grp":"W2"}
       ]
 };
+
+exports.getTimetable = function(){
+  return timetable;
+}
