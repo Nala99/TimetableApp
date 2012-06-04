@@ -177,8 +177,7 @@ else if(fname=="College"){
     act:'getCFeeds'
   },function(fdataList){
     for (var i=0; i< fdataList.length;i++){
-      $("<p>" + fdataList[i]+"<p>").appendTo("#contentText");
-      //$("<p>" + fdataList[i].fields.description + "</p>").appendTo("#contentText");
+      $("<p>" + fdataList[i].fields.description + "</p>").appendTo("#contentText");
     }
     setiScroll();
   } 
