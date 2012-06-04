@@ -14,8 +14,9 @@ Depending on what the user clicks one of the follwing functions will be called
 to display the correct information to the screen. In each case the max ammount 
 of results retrieved will be 10
 */
+
+var fdataList = getLFeeds();
 exports.getLFeeds=function(params,callback){
-  document.write("hello World");
   var ldata = $fh.feed({
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 10
@@ -24,7 +25,6 @@ exports.getLFeeds=function(params,callback){
       return callback(null,error);
     }
     else{
-      //var fdataList=ldata.list;
       return callback(null,result);
     }
   });
