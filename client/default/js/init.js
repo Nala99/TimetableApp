@@ -9,12 +9,12 @@ $fh.ready(function() {
     if(res.data){
       times= res.data;
       
-      $fh.data({
+     /* $fh.data({
       act:'save',
       key:'timetable'
       },function(){
       
-      })
+      })*/
     }
   },function(err){
     console.log("Error Connecting. Loading from local storage.");
@@ -177,7 +177,8 @@ else if(fname=="College"){
     act:'getCFeeds'
   },function(fdataList){
     for (var i=0; i< fdataList.length;i++){
-      $("<p>" + fdataList[i].fields.description + "</p>").appendTo("#contentText");
+      $("<p>" + fdataList+"<p>").appendTo("#contentText");
+      //$("<p>" + fdataList[i].fields.description + "</p>").appendTo("#contentText");
     }
     setiScroll();
   } 
