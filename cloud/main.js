@@ -20,11 +20,11 @@ exports.getLFeeds=function(params,callback){
   "list-max": 10
   },function(result,error){
     if(error){
-     return callback(null, {data:'ok'})
+     return callback(null, {data:'ok'});
     }
     else{
       //var fdataList=ldata.list;
-      return callback(null, {data:'ok'})
+      return callback(null, {data:'ok'});
     }
   });
 };
