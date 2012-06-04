@@ -165,10 +165,10 @@ function showFeed(name){
   if(fname == "Library"){
     $fh.act({
       act:'getLFeeds'
-    },function(fdataList){
-      //console.log(fdataList);
-      for (var i=0; i< fdataList.length;i++){
-        $("<p>" + fdataList[i].fields.title + "</p>").appendTo("#contentText");
+    },function(res){
+      console.log(res);
+      for (var i=0; i< res.length;i++){
+        $("<p>" + res[i].fields.title + "</p>").appendTo("#contentText");
     }
     setiScroll();
   }
