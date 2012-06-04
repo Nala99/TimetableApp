@@ -23,7 +23,8 @@ exports.getLFeeds=function(params,callback){
       return callback(null,err);
     }
     else{
-      return callback(null,res.list);
+      var fdataList = JSON.parse(res.list);
+      return callback(null,fdataList);
     }
   });
 };
