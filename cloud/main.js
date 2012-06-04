@@ -20,6 +20,7 @@ exports.getLFeeds=function(params,callback){
   "list-max": 1
   },function(res,err){
     if(res){
+      console.log("Result Found");
       return callback(null,res);
     }
     else{
