@@ -19,7 +19,7 @@ exports.getLFeeds=function(){
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 10
   });
-  var fdataList = ldata.list;
+  var fdataList=setTimeout(ldata.list,5000);
   
   return fdataList;
 }
