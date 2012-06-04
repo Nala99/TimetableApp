@@ -19,9 +19,9 @@ exports.getLFeeds=function(params,callback){
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 10
   });
-  var fdataList=setTimeout(ldata.list,10000);
+  var fdataList=ldata.list;
   
-  return callback(null,fdataList);
+  return setTimeout(callback(null,fdataList),5000);
 };
 
 function getCFeeds(){
