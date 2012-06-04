@@ -27,7 +27,6 @@ exports.getLFeeds=function(params,callback){
       return callback(null,fdataList);
     }
   });
-  return callback(null,ldata);
 };
 
 function getCFeeds(){
