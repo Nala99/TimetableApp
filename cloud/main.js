@@ -24,7 +24,7 @@ exports.getLFeeds=function(params,callback){
       return callback(null,err);
     }
     else{
-      console.log(res);
+      console.log(res +"/n/n/n");
       var fdataList = res.list;
       console.log(fdataList);
       return callback(null,{data:fdataList});
