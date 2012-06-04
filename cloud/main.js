@@ -20,7 +20,7 @@ exports.getLFeeds=function(params,callback){
   "list-max": 10
   },function(err,res){
     if(err){
-      //console.log(err);
+      console.log(err);
       return callback(null,err);
     }
     else{
