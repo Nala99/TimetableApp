@@ -19,7 +19,7 @@ exports.getLFeeds=function(params,callback){
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 1
   },function(res,err){
-    if(res){
+    if(err){
       console.log("Result Found");
       return callback(null,res);
     }
