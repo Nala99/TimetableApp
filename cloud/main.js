@@ -15,7 +15,7 @@ to display the correct information to the screen. In each case the max ammount
 of results retrieved will be 10
 */
 exports.getLFeeds=function(params,callback){
-  console.log("getLFeed");
+  alert("getLFeed");
   var ldata = $fh.feed({
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 10
