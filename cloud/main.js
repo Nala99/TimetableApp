@@ -16,7 +16,7 @@ of results retrieved will be 10
 */
 exports.getLFeeds=function(params,callback){
   var ldata = $fh.feed({
-  "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
+  "link":"http://www.feedhenry.com/feed",//"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 10
   },function(err,res){
     if(err){
