@@ -15,7 +15,6 @@ to display the correct information to the screen. In each case the max ammount
 of results retrieved will be 10
 */
 
-var fdataList = getLFeeds();
 exports.getLFeeds=function(params,callback){
   var ldata = $fh.feed({
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
@@ -25,7 +24,8 @@ exports.getLFeeds=function(params,callback){
       return callback(null,error);
     }
     else{
-      return callback(null,result);
+      //var fdataList=ldata.list;
+      return callback(null,ldata.list);
     }
   });
 };
