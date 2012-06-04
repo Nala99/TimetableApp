@@ -1,0 +1,84 @@
+<!-- Create links to external files needed -->
+<link href="css/style.css" rel="stylesheet" />
+<script src="resources/jquery.js" type="text/javascript"></script>
+<script src="resources/iscroll.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+<!-- Displays "Menu" as deafult but changes depending on what the user presses -->
+<div class="header" id="headerTxt">
+Menu
+</div>
+<body>
+<div class="container">
+<!-- Application Navigation -->
+<div id="navScroller">
+<div class="navMenu">
+<!-- *** Timetable button and submenu *** -->
+  <div class="navBtn" id="timetable">
+    <h4>Timetable</h4>
+  </div>
+
+<div class="subMenu" id="timetableSub">
+    <div class="subBtn" onclick="getTimes('W1')">
+      <h4>W1</h4>
+    </div>
+  
+    <div class="subBtn" onclick="getTimes('W2')">
+      <h4>W2</h4>
+    </div>
+  
+    <div class="subBtn" onclick="allTimes()">
+      <h4>View All</h4>
+    </div>
+  
+    <div class="subBtn">
+      <h4>Add timetable to Google</h4>
+    </div>
+  </div><!-- Close subMenu -->
+  
+  <!-- *** Assignment button and submenu *** -->
+  <div class="navBtn" id="assignment">
+    <h4>Assignments</h4>
+  </div>
+  
+  <div class="subMenu" id="assignmentSub">
+    <div class="subBtn">
+      <h4>View Assignments</h4>
+    </div>
+  
+    <div class="subBtn">
+      <h4>Add Assignments</h4>
+    </div>
+  
+    <div class="subBtn">
+      <h4>Update Assignments</h4>
+    </div>
+  </div><!-- Close subMenu -->
+  
+  <!-- *** College Menu and Submenu *** -->
+  <div class="navBtn" id="collegeInfo">
+    <h4>College Information</h4>
+  </div>
+  
+  <div class="subMenu" id="collegeInfoSub">
+    <div class="subBtn" onclick="showFeed('Library')">
+      <h4>Library Feeds</h4>
+    </div>
+  
+    <div class="subBtn" onclick="showFeed('College')">
+      <h4>Campus Feeds</h4>
+    </div>
+
+  </div><!-- Close subMenu -->
+    <!--*** Display form to send email***-->
+  <div class="navBtn" id="contactInfo" onclick="contactPage()">
+    <h4>Contact Me</h4>
+  </div>
+</div><!-- Close navMenu -->
+</div>
+<!-- *** Holds all information that the user wants the see displayed ***-->
+<div id="scrollWrapper">
+  <div class="content" id="contentText">
+  </div>
+</div>
+</div> <!-- Close Container -->
+</body>
