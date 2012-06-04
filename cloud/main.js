@@ -24,7 +24,7 @@ exports.getLFeeds=function(params,callback){
     }
     else{
       //var fdataList=ldata.list;
-      return callback(null,ldata.list);
+      return callback(null,result);
     }
   });
 };
