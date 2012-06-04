@@ -18,14 +18,13 @@ exports.getLFeeds=function(params,callback){
   var ldata = $fh.feed({
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=witlibraries",
   "list-max": 1
-  },function(res,err){
-    if(err){
-      console.log("Result Found");
-      return callback(null,err);
+  },function(result,error){
+    if(error){
+      return callback(null,error);
     }
     else{
       //var fdataList=ldata.list;
-      return callback(null,res);
+      return callback(null,result);
     }
   });
 };
