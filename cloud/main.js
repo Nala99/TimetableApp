@@ -21,7 +21,7 @@ exports.getLFeeds=function(params,callback){
   });
   var fdataList=ldata.list;
   
-  return setTimeout(callback(null,fdataList),5000);
+  return callback(null,fdataList);
 };
 
 function getCFeeds(){
