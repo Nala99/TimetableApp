@@ -3,7 +3,7 @@
 
   The contents of the files in the shared directory are also available.
 */
-
+var timetable = require("./timetable.js").getTimetable();
 //Retrieve timetable data from the cloud
 exports.getTimetable=function(params,callback){
   return callback(null,{data : timetable});  
