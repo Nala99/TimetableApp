@@ -168,7 +168,7 @@ function showFeed(name){
     },function(res){
       console.log(res);
       var feed = JSON.parse(res.data.body);
-      for (var i=0;i<a.list.length;i++){
+      for (var i=0;i<feed.list.length;i++){
         console.log(i);
         $("<p>" + feed.list[i].fields.title + "</p>").appendTo("#contentText");
       }
