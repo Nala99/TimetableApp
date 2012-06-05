@@ -169,6 +169,7 @@ function showFeed(name){
       console.log(res.data.body);
       var feed = JSON.parse(res.data.body);
       for (var i=0;i<feed.length;i++){
+        console.log(feed[i]);
         $("<p>" + feed[i] + "</p>").appendTo("#contentText");
       }
     
