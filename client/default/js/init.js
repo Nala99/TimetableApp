@@ -1,5 +1,4 @@
-var times=timetable; 
-var scroller,navScroll;// create global variables.
+var times,scroller,navScroll;// create global variables.
 /*
  * Get information from the cloud when the app is loaded
  */
