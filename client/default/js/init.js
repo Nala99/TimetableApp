@@ -167,9 +167,8 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res);
-      for (var i=0; i< res.data;i++){
-        $("<p>" + res[i].data + "</p>").appendTo("#contentText");
-        console.log(res[i]);
+      
+        $("<p>" + res[2].data + "</p>").appendTo("#contentText");
     }
     setiScroll();
   },function(err){
