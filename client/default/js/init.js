@@ -168,7 +168,7 @@ function showFeed(name){
     },function(res){
       console.log(res.data.body);
       var feed = JSON.parse(res.data.body);
-      console.log(feed);
+      console.log("This is a JSON OBJECT"+feed);
       for (var i=0;i<feed.length;i++){
         console.log(i);
         $("<p>" + feed[i] + "</p>").appendTo("#contentText");
