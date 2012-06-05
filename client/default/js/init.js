@@ -182,10 +182,14 @@ else if(fname=="College"){
    $fh.act({
     act:'getCFeeds'
   },function(res){
-    for (var i=0; i< fdataList.length;i++){
-      $("<p>" + fdataList[i].fields.description + "</p>").appendTo("#contentText");
+    console.log(res);
+    var feed = JSON.parse(res.data.body);
+    for (var i=0; i< feed.list.length;i++){
+      $("<p>" + feed.list[i].fields.title + "</p>").appendTo("#contentText");
     }
     setiScroll();
+  },function(){
+  alert("error loading feed: "+err);
   } 
 );}
 }//Cloase Show Feed
