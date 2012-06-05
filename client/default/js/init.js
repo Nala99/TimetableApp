@@ -170,7 +170,7 @@ function showFeed(name){
       var a =list.title;
       console.log(a);
       
-        $("<p>" + res[2].data + "</p>").appendTo("#contentText");
+        $("<p>" + res + "</p>").appendTo("#contentText");
     
     setiScroll();
   },function(err){
