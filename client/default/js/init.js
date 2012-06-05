@@ -169,7 +169,7 @@ function showFeed(name){
       console.log(res);
       var feed = JSON.parse(res.data.body);
       for (var i=0;i<feed.list.length;i++){
-        console.log("Loaded Feed "+ i+1);
+        console.log("Loaded Feed "+i+1);
         $("<p>" + feed.list[i].fields.title + "</p>").appendTo("#contentText");
       }
     
