@@ -167,9 +167,10 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res.data.body);
-      var a = JSON.parse(res.data.body);
-      console.log(a);
-        $("<p>" + res.data.body + "</p>").appendTo("#contentText");
+      var feed = JSON.parse(res.data.body);
+      for (var i=0;i<feed.length;i++){
+        $("<p>" + feed[i] + "</p>").appendTo("#contentText");
+      }
     
     setiScroll();
   },function(err){
