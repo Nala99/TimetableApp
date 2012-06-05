@@ -14,6 +14,8 @@ $fh.ready(function() {
         key:'timetable'
       },function(){
         alert("Data Saved");
+      },function(err,msg){
+      console.log("Could not save to device.\n" + err);
       });
     }
   },function(err){
