@@ -169,9 +169,9 @@ function showFeed(name){
       console.log(res);
       var a = JSON.parse(res.data.body);
       console.log(a.list[2].fields.title);
-      for (var i=0;i<feed.length;i++){
+      for (var i=0;i<a.list.length;i++){
         console.log(i);
-        $("<p>" + feed[i] + "</p>").appendTo("#contentText");
+        $("<p>" + a.list[i].fields.title + "</p>").appendTo("#contentText");
       }
     
     setiScroll();
