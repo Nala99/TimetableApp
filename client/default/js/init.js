@@ -167,11 +167,9 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res);
-      //var a =res.data[2].title;
-      //console.log(a);
-      
+      for (var i =0;i<res.length;i++){
         $("<p>" + res + "</p>").appendTo("#contentText");
-    
+    }
     setiScroll();
   },function(err){
     alert("ERROR");
