@@ -9,12 +9,12 @@ $fh.ready(function() {
     if(res.data){
       times= res.data;
       
-     /* $fh.data({
-      act:'save',
-      key:'timetable'
+      $fh.data({
+        act:'save',
+        key:'timetable'
       },function(){
-      
-      })*/
+        alert("Data Saved");
+      });
     }
   },function(err){
     console.log("Error Connecting. Loading from local storage.");
@@ -24,11 +24,11 @@ $fh.ready(function() {
     key:'timetable'
     },function(res){
       if(res.data){
-        times = res.data
+        times = res.data;
       }
     },function(err){
     console.log("Error: " + err);
-    })
+    });
   });
   //Call function to create menu buttons
   btnSetup();
@@ -73,7 +73,7 @@ function getTimes(str){
       setColours();//Set the colours of the rows using this function
     }
   }
-  setiScroll()
+  setiScroll();
 }
 
 //Show all times of the particular day
@@ -91,7 +91,7 @@ function allTimes(){
     $("<tr><td>"+todaysDay[i].time+"</td><td>"+todaysDay[i].className+"</td><td>"+todaysDay[i].room+"</td><td>"+todaysDay[i].grp+"</td></tr>").appendTo("#timetableContent");
     setColours();//Set the colours of the rows using this function
   }
-  setiScroll()
+  setiScroll();
 }
 
 /*
@@ -213,7 +213,7 @@ function submitMail(email){
   },function(){
     alert("Message Sent!");
   },function(msg,err){
-    alert("There was a problem sending your email.\n Error: " + msg)
+    alert("There was a problem sending your email.\n Error: " + msg);
   });
 }
 
