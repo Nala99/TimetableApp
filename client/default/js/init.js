@@ -168,7 +168,7 @@ function showFeed(name){
     },function(res){
       console.log(res);
       for (var i=0; i< res.length;i++){
-        $("<p>" + res[i].fields.title + "</p>").appendTo("#contentText");
+        $("<p>" + res[i].fields + "</p>").appendTo("#contentText");
     }
     setiScroll();
   },function(err){
