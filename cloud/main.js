@@ -30,13 +30,18 @@ exports.getLFeeds=function(params,callback){
   });
 };
 
-function getCFeeds(){
-  
+exports.getCFeeds=function(params,callback){
   var ldata = $fh.feed({
   "link":"http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=waterfordit",
   "list-max": 10
+  },function(err,res){
+  if(err){
+    console.log(err);
+    return callback(null,err);
+  }
+  else{
+    console.log(res);
+    return callback(null,{data:res});    
+  }
   });
-  var fdataList = ldata.list;
-  
-  return fdataList;
-}
+};
