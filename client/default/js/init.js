@@ -167,6 +167,8 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res.data.body);
+      var a = JSON.parse(res.data.body);
+      console.log(a);
         $("<p>" + res.data.body + "</p>").appendTo("#contentText");
     
     setiScroll();
