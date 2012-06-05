@@ -1,4 +1,5 @@
-var times, scroller,navScroll;// create global variables.
+var times=timetable; 
+var scroller,navScroll;// create global variables.
 /*
  * Get information from the cloud when the app is loaded
  */
@@ -8,7 +9,7 @@ $fh.ready(function() {
   }, function (res){
     if(res.data){
       times= res.data;
-      
+      /*Save data to local storage*/
       $fh.data({
         act:'save',
         key:'timetable',
