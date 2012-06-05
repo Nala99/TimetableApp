@@ -11,7 +11,8 @@ $fh.ready(function() {
       
       $fh.data({
         act:'save',
-        key:'timetable'
+        key:'timetable',
+        val:JSON.stringify("timetable")
       },function(){
         alert("Data Saved");
       },function(err,msg){
@@ -23,8 +24,7 @@ $fh.ready(function() {
     //load from local storage if no connection is found
     $fh.data({
     act:'load',
-    key:'timetable',
-    val:JSON.stringify("timetable")
+    key:'timetable'
     },function(res){
       if(res.data){
         times = res.data;
