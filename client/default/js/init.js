@@ -14,7 +14,7 @@ $fh.ready(function() {
         key:'timetable',
         val:JSON.stringify("timetable")
       },function(){
-        alert("Data Saved");
+        console.log("Data Saved");
       },function(err,msg){
       console.log("Could not save to device.\n" + err);
       });
@@ -30,7 +30,7 @@ $fh.ready(function() {
         times = res.data;
       }
     },function(err){
-    alert("Error: " + err);
+      console.log("Error: " + err);
     });
   });
   //Call function to create menu buttons
