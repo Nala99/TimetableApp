@@ -30,7 +30,7 @@ $fh.ready(function() {
         times = res.data;
       }
     },function(err){
-    console.log("Error: " + err);
+    alert("Error: " + err);
     });
   });
   //Call function to create menu buttons
