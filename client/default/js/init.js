@@ -166,9 +166,9 @@ function showFeed(name){
     $fh.act({
       act:'getLFeeds'
     },function(res){
-      console.log(res.data);
-      for (var i=0; i< res.list;i++){
-        $("<p>" + res[i].fields + "</p>").appendTo("#contentText");
+      console.log(res);
+      for (var i=0; i< res.data;i++){
+        $("<p>" + res[i].data + "</p>").appendTo("#contentText");
         console.log(res[i]);
     }
     setiScroll();
