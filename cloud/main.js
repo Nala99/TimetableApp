@@ -26,7 +26,7 @@ exports.getLFeeds=function(params,callback){
     else{
       var fdataList = JSON.parse(res);
       console.log(fdataList);
-      return callback(null,{data:res});
+      return callback(null,{data:fdataList});
     }
   });
 };
