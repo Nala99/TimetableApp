@@ -169,7 +169,7 @@ function showFeed(name){
       console.log(res);
       
         $("<p>" + res[2].data + "</p>").appendTo("#contentText");
-    }
+    
     setiScroll();
   },function(err){
     alert("ERROR");
