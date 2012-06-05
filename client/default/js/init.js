@@ -167,7 +167,7 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res);
-      console.log(res[2].feilds.title);
+      console.log(res[2].fields);
       
         $("<p>" + res[2].data + "</p>").appendTo("#contentText");
     
