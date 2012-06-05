@@ -24,6 +24,7 @@ exports.getLFeeds=function(params,callback){
       return callback(null,err);
     }
     else{
+      console.log(res);
       return callback(null,{data:res});
     }
   });
