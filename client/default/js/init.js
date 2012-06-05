@@ -175,7 +175,7 @@ function showFeed(name){
     
     setiScroll();
   },function(err){
-    alert("ERROR");
+    alert("error loading feed: "+ err);
   }
 );}
 else if(fname=="College"){
