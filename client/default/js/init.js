@@ -167,7 +167,7 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res);
-      for (var i =0;i<res.fields.length;i++){
+      for (var i =0;i<res.body.length;i++){
         $("<p>" + res + "</p>").appendTo("#contentText");
     }
     setiScroll();
