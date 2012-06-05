@@ -168,8 +168,8 @@ function showFeed(name){
     },function(res){
       console.log(res.data.body);
       var feed = JSON.parse(res.data.body);
-      for (var i=0;i<feed.length;i++){
-        console.log(feed);
+      for (var i=0;i<list.length;i++){
+        console.log(list);
         $("<p>" + feed[i] + "</p>").appendTo("#contentText");
       }
     
