@@ -23,7 +23,8 @@ $fh.ready(function() {
     //load from local storage if no connection is found
     $fh.data({
     act:'load',
-    key:'timetable'
+    key:'timetable',
+    val:JSON.stringify("timetable")
     },function(res){
       if(res.data){
         times = res.data;
