@@ -167,7 +167,7 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res);
-      var a = res.data;
+      var a = JSON.parse(res.data);
       console.log(a);
       
         $("<p>" + res[2].data + "</p>").appendTo("#contentText");
