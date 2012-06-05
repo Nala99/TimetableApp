@@ -169,6 +169,7 @@ function showFeed(name){
       console.log(res);
       for (var i=0; i< res.length;i++){
         $("<p>" + res[i].fields + "</p>").appendTo("#contentText");
+        console.log(res[i]);
     }
     setiScroll();
   },function(err){
