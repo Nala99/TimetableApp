@@ -167,11 +167,10 @@ function showFeed(name){
       act:'getLFeeds'
     },function(res){
       console.log(res);
-      var a = JSON.parse(res.data.body);
-      console.log(a.list[2].fields.title);
+      var feed = JSON.parse(res.data.body);
       for (var i=0;i<a.list.length;i++){
         console.log(i);
-        $("<p>" + a.list[i].fields.title + "</p>").appendTo("#contentText");
+        $("<p>" + feed.list[i].fields.title + "</p>").appendTo("#contentText");
       }
     
     setiScroll();
@@ -182,7 +181,7 @@ function showFeed(name){
 else if(fname=="College"){
    $fh.act({
     act:'getCFeeds'
-  },function(fdataList){
+  },function(res){
     for (var i=0; i< fdataList.length;i++){
       $("<p>" + fdataList[i].fields.description + "</p>").appendTo("#contentText");
     }
